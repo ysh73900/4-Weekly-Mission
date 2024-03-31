@@ -1,0 +1,17 @@
+.folderOptionOptions {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.folderOptionOption {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.folderOptionOption button {
+  color: var(--linkbrary-gray60);
+  font-size: 1.4rem;
+  font-weight: 600;
+}

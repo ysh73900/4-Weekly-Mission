@@ -1,0 +1,18 @@
+.folderOption {
+  display: flex;
+  justify-content: space-between;
+}
+
+.folderOptionFolderName {
+  color: var(--linkbrary-black);
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+/* mobile */
+@media screen and (min-width: 375px) and (max-width: 767px) {
+  .folderOption {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+}

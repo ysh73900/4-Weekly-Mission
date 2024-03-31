@@ -1,0 +1,71 @@
+.shareFolderModal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shareFolderModalTop {
+  color: var(--linkbrary-gray100);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.shareFolderModalMiddle {
+  color: var(--linkbrary-gray60);
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.2rem;
+  margin-bottom: 2.4rem;
+}
+
+.shareFolderModalBottom {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.shareFolderModalBottomKakao,
+.shareFolderModalBottomFacebook,
+.shareFolderModalBottomLink {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.kakaoCircle {
+  background-color: #fee500;
+}
+
+.facebookCircle {
+  background-color: #1877f2;
+}
+
+.linkCircle {
+  background-color: rgba(157, 157, 157, 0.04);
+}
+
+.kakaoCircle,
+.facebookCircle,
+.linkCircle {
+  border-radius: 3.7rem;
+  padding: 1.2rem;
+}
+
+.kakaoIcon,
+.facebookIcon,
+.linkIcon {
+  width: 1.8rem;
+  height: 1.8rem;
+}
+
+.shareFolderModalBottomKakao span,
+.shareFolderModalBottomFacebook span,
+.shareFolderModalBottomLink span {
+  color: var(--linkbrary-gray100);
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
