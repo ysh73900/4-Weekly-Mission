@@ -17,3 +17,8 @@ export interface Folder {
     count: number;
   };
 }
+
+export type Owner = {
+  profileImageSource: string;
+  name: string;
+};

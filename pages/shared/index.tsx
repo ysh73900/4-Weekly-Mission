@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getFolder } from "../../api/api";
-import { Link } from "../../types";
+import { Link, Owner } from "../../types";
 import {
   CardList,
   OnlyCard,
@@ -11,16 +11,20 @@ import {
 import styles from "./SharePage.module.css";
 
 interface FolderInfos {
-  owner: {
-    profileImageSource: string;
-    name: string;
-  };
   name: string;
   links: Link[];
+  owner: Owner;
 }
 
 const SharePage = () => {
-  const [folderData, setFolderData] = useState<FolderInfos>({} as FolderInfos);
+  const [folderData, setFolderData] = useState<FolderInfos>({
+    links: [],
+    name: "",
+    owner: {
+      name: "",
+      profileImageSource: "",
+    },
+  });
   const [searchTerm, setSearchTerm] = useState<string>("");
 
   const handleLoad = async () => {

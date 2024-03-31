@@ -1,10 +1,8 @@
+import { Owner } from "../../types";
 import styles from "./FolderInfo.module.css";
 
 interface Profile {
-  owner?: {
-    name: string;
-    profileImageSource: string;
-  };
+  owner?: Owner;
   name?: string;
 }
 
