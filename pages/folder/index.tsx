@@ -17,13 +17,14 @@ const FolderPage = () => {
   const [links, setLinks] = useState<Link[]>([]);
   const [selectName, setSelectName] = useState("전체");
   const [selectId, setSelectId] = useState<number | null>(null);
-  const [linkUrl, setLinkUrl] = useState("");
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [isAddLinkFixed, setIsAddLinkFixed] = useState(true);
 
   const addLinkRef = useRef<HTMLDivElement>(null);
 
-  const handleLoadFolderList = async (option: { userId: number }) => {
+  const handleLoadFolderList = async (option: {
+    userId: number;
+  }): Promise<void> => {
     const folderListData = await getFolderList(option);
     setFolderList(folderListData.data);
   };
@@ -51,10 +52,6 @@ const FolderPage = () => {
     } else {
       setSelectId(id);
     }
-  };
-
-  const handleLinkAddInputChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setLinkUrl(e.target.value);
   };
 
   const filteredLinks = links.filter((item) => {
@@ -100,11 +97,7 @@ const FolderPage = () => {
     <Layout>
       <div className={styles.folderPage}>
         <div ref={addLinkRef}>
-          <FolderHeader
-            folderList={folderList}
-            linkUrl={linkUrl}
-            handleLinkAddInputChange={handleLinkAddInputChange}
-          />
+          <FolderHeader folderList={folderList} />
         </div>
 
         <div className={styles.folderPageContent}>
@@ -134,13 +127,7 @@ const FolderPage = () => {
             </CardList>
           )}
         </div>
-        {!isAddLinkFixed && (
-          <FolderHeader
-            folderList={folderList}
-            linkUrl={linkUrl}
-            handleLinkAddInputChange={handleLinkAddInputChange}
-          />
-        )}
+        {!isAddLinkFixed && <FolderHeader folderList={folderList} />}
       </div>
     </Layout>
   );

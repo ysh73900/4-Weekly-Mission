@@ -1,0 +1,50 @@
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialLogin {
+  display: flex;
+  width: 400px;
+  padding: 12px 24px;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid var(--linkbrary-gray20);
+  background: var(--linkbrary-gray10);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: var(--linkbrary-gray100);
+}
+
+.socialIcon {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.googleIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.googleLogo {
+  position: absolute;
+}
+
+.kakaoIcon {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.kakaoLogo {
+  position: absolute;
+}

@@ -1,0 +1,27 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.title p {
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.4rem;
+}
+
+.title a {
+  color: var(--linkbrary-primary-color);
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  border-bottom: 0.2rem solid var(--linkbrary-primary-color);
+}

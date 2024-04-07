@@ -1,0 +1,9 @@
+.container {
+  background: var(--linkbrary-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  height: 100vh;
+  padding: 23.8rem 0rem 25.3rem 0rem;
+}

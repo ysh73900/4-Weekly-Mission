@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ChangeEvent } from "react";
+import { ChangeEvent, useState } from "react";
 import { useModal } from "../../../hooks/useModal";
 import { AddLinkModal } from "../../Modal";
 import { Folder } from "../../../types";
@@ -7,22 +7,22 @@ import LinkIcon from "@/public/images/folder/link.svg";
 import styles from "./FolderHeader.module.css";
 
 interface Props {
-  linkUrl: string;
-  handleLinkAddInputChange: (e: ChangeEvent<HTMLInputElement>) => void;
   folderList: Folder[];
 }
 
-export const FolderHeader = ({
-  linkUrl,
-  handleLinkAddInputChange,
-  folderList,
-}: Props) => {
+export const FolderHeader = ({ folderList }: Props) => {
   const {
     openModal: AddOpenModal,
     modalRef: AddModalRef,
     handleModalClose: AddHandleModalClose,
     handleModalOpen: AddHandleModalOpen,
   } = useModal();
+
+  const [linkUrl, setLinkUrl] = useState("");
+
+  const handleLinkAddInputChange = (e: ChangeEvent<HTMLInputElement>) => {
+    setLinkUrl(e.target.value);
+  };
   return (
     <div className={styles.folderHeader}>
       <div className={styles.folderHeaderLink}>

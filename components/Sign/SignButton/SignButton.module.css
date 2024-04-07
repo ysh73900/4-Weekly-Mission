@@ -1,0 +1,16 @@
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40rem;
+  padding: 1.6rem 2rem;
+  border-radius: 0.8rem;
+  border: none;
+  background: var(--gra-purpleblue-to-skyblue);
+  color: var(--linkbrary-grey-Light);
+  font-size: 1.8rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  cursor: pointer;
+}
