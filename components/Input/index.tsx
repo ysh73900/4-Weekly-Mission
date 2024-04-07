@@ -50,7 +50,7 @@ const Input = ({
               width={16}
               height={16}
               onClick={togglePasswordVisibility}
-              src={`/images/sign/eye-${showPassword ? "off" : "on"}.png`}
+              src={`/images/sign/eye-${showPassword ? "on" : "off"}.png`}
               alt="eyeIcon"
             />
           )}
